@@ -83,13 +83,11 @@ body {
 }
 
 
-
-
 /* Badges Section */
 .badges {
     background-color: #110202; /* Dark background */
     -webkit-box-shadow: inset 0px 0px 30px 10px rgb(22, 0, 0);
-    padding: 3rem 3rem;
+    padding: 3rem;
     text-align: center;
     color: #fff; /* Ensure text stands out on dark background */
 }
@@ -98,7 +96,7 @@ body {
     display: flex;
     justify-content: space-around;
     gap: 3rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows badges to wrap into new rows */
     padding-top: 2rem; /* Additional space on top for better visual spacing */
 }
 
@@ -108,7 +106,7 @@ body {
     align-items: center;
     gap: 1rem;
     background-color: #222; /* Dark gray for badge background */
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -135,26 +133,47 @@ body {
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .badge-container {
+        justify-content: space-evenly; /* Evenly spaced badges on medium screens */
+    }
+}
+
 @media (max-width: 768px) {
     .badge-container {
-        flex-direction: row;
-        gap: 2rem;
-        font-size: 10px;
+        justify-content: center; /* Center the badges */
+        flex-wrap: wrap; /* Allow wrapping to two rows if necessary */
+        gap: 1rem; /* Reduce gap for better spacing */
     }
     .badge {
-        width: 200px;
-        height: 200px;
-        padding: 1.5rem 1.5rem; /* Reduced padding for more compact look */
+        width: 160px; /* Slightly reduced width */
+        height: 160px; /* Adjust height to match width */
+        padding: 1rem; /* Reduced padding for a more compact look */
     }
     .badge-icon {
         font-size: 2.5rem; /* Slight reduction for better balance */
     }
     .badge-text {
-        font-size: 1.2rem; /* Slight reduction for better balance */
+        font-size: 1.1rem; /* Slight reduction for better readability */
     }
 }
 
-
+@media (max-width: 480px) {
+    .badge-container {
+        padding: 1rem; /* Reduce container padding for small screens */
+    }
+    .badge {
+        width: 130px; /* Even smaller width on very small screens */
+        height: 130px; /* Adjust height accordingly */
+        padding: 0.8rem; /* Further reduce padding */
+    }
+    .badge-icon {
+        font-size: 2rem; /* Adjust icon size for smaller screens */
+    }
+    .badge-text {
+        font-size: 1rem; /* Adjust text size to fit better on small screens */
+    }
+}
 
 
 
