@@ -98,7 +98,7 @@ body {
 .badge {
     display: flex;
     align-items: center;
-    background: #ffffff;
+    background: #d0d0d0;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px 15px;
