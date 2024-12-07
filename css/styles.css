@@ -85,113 +85,73 @@ body {
 
 /* Badges Section */
 .badges {
-    background-color: #110202; /* Dark background */
-    -webkit-box-shadow: inset 0px 0px 30px 10px rgb(22, 0, 0);
-    padding: 3rem;
-    text-align: center;
-    color: #fff; /* Ensure text stands out on dark background */
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
 .badge-container {
     display: flex;
-    justify-content: space-around;
-    gap: 3rem;
-    flex-wrap: wrap; /* Allows badges to wrap into new rows */
-    padding-top: 2rem; /* Additional space on top for better visual spacing */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .badge {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    background-color: #222; /* Dark gray for badge background */
-    padding: 0.5rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 200px;
-    height: 200px;
-    border: 1px solid #2b0707; /* Slightly darker border for emphasis */
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(20% - 10px);
+    max-width: calc(20% - 10px);
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .badge:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
 }
 
 .badge-icon {
-    font-size: 3rem;
-    color: #ff0000; /* Red for icons */
-    transition: color 0.3s ease;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Ajustare dinamică a dimensiunii */
+    margin-right: 10px;
+    color: #ff9800;
 }
 
 .badge-text {
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-align: center;
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Ajustare dinamică a textului */
+    font-weight: 500;
+    color: #333;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .badge-container {
-        justify-content: space-evenly; /* Evenly spaced badges on medium screens */
-    }
-}
-
+/* Media query pentru ajustare suplimentară */
 @media (max-width: 768px) {
     .badge-container {
-        justify-content: center; /* Center the badges */
-        flex-wrap: wrap; /* Allow wrapping to two rows if necessary */
-        gap: 1rem; /* Reduce gap for better spacing */
+        justify-content: center;
+        gap: 15px;
     }
-    .badge {
-        width: 160px; /* Slightly reduced width */
-        height: 160px; /* Adjust height to match width */
-        padding: 1rem; /* Reduced padding for a more compact look */
-    }
-    .badge-icon {
-        font-size: 2.5rem; /* Slight reduction for better balance */
-    }
-    .badge-text {
-        font-size: 1rem; /* Slight reduction for better readability */
-    }
-}
 
-@media (max-width: 431px) {
-    .badge-container {
-        padding: 0.1rem; /* Reduce container padding for small screens */
-    }
     .badge {
-        width: 130px; /* Even smaller width on very small screens */
-        height: 130px; /* Adjust height accordingly */
-        padding: 1rem; /* Further reduce padding */
+        flex: 1 1 calc(45% - 15px);
+        max-width: calc(45% - 15px);
     }
-    .badge-icon {
-        font-size: 2rem; /* Adjust icon size for smaller screens */
-    }
-    .badge-text {
-        font-size: 12px; /* Adjust text size to fit better on small screens */
-    }
-}
 
-
-@media (max-width: 431px) and (min-width: 200px) {
-    .badge-container {
-        width: 100%;
-        padding: 0.1rem; /* Reduce container padding for small screens */
-    }
-    .badge {
-        width: 30%; /* Even smaller width on very small screens */
-        height: 80px; /* Adjust height accordingly */
-        padding: 0.5rem; /* Further reduce padding */
-    }
     .badge-icon {
-        font-size: 1rem; /* Adjust icon size for smaller screens */
+        font-size: clamp(1rem, 4vw, 1.2rem);
     }
+
     .badge-text {
-        font-size: 7px; /* Adjust text size to fit better on small screens */
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        line-height: 1.2;
+        text-align: center;
     }
+    
 }
 
 
