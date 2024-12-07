@@ -1,0 +1,726 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/slider1.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Asigură că imaginea rămâne în fundal */
+    filter: brightness(0.5); /* Ajustează luminozitatea imaginii */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 30%, transparent 100%);
+    z-index: 0; /* Asigură că vinieta este deasupra imaginii dar sub textul principal */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero .btn-primary {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: #e6b800;
+}
+
+
+
+
+/* Badges Section */
+.badges {
+    background-color: #110202; /* Dark background */
+    -webkit-box-shadow: inset 0px 0px 30px 10px rgb(22, 0, 0);
+    padding: 3rem 3rem;
+    text-align: center;
+    color: #fff; /* Ensure text stands out on dark background */
+}
+
+.badge-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding-top: 2rem; /* Additional space on top for better visual spacing */
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #222; /* Dark gray for badge background */
+    padding: 0.5rem 0.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #2b0707; /* Slightly darker border for emphasis */
+}
+
+.badge:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.badge-icon {
+    font-size: 3rem;
+    color: #ff0000; /* Red for icons */
+    transition: color 0.3s ease;
+}
+
+.badge-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .badge-container {
+        flex-direction: row;
+        gap: 2rem;
+        font-size: 10px;
+    }
+    .badge {
+        width: 200px;
+        height: 200px;
+        padding: 1.5rem 1.5rem; /* Reduced padding for more compact look */
+    }
+    .badge-icon {
+        font-size: 2.5rem; /* Slight reduction for better balance */
+    }
+    .badge-text {
+        font-size: 1.2rem; /* Slight reduction for better balance */
+    }
+}
+
+
+
+
+
+/* About Us */
+.about-us {
+    padding: 3rem 1rem;
+    text-align: left;
+    background-color: #222; /* Dark background */
+    color: white; /* White text */
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: rgb(183, 183, 183); /* White text for paragraph */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 2rem 1rem;
+    }
+
+    .about-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+}
+/* Trust Icons Section */
+.trust-icons {
+    display: flex; /* Activează Flexbox */
+    justify-content: center; /* Centrează imaginea pe orizontală */
+    align-items: center; /* Centrează imaginea pe verticală */
+    margin-top: 2rem;
+}
+
+.trust-icons img {
+    width: 100vw; /* Ajustează dimensiunea imaginii după nevoie */
+    height: auto;
+    margin: -20rem 0rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.trust-icons img:hover {
+    transform: scale(1.1); /* Mic efect de zoom pe hover */
+}
+
+@media (max-width: 768px) {
+    .trust-icons img {
+        width: 100vw; /* Ajustează dimensiunea imaginii după nevoie */
+        height: auto;
+        margin: -5rem 0rem;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+  }
+
+
+
+* Section styles */
+.services {
+  position: relative;
+  background: #1a1a1a;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.services-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #e63946;
+  text-transform: uppercase;
+}
+
+/* General Styles */
+.services-section {
+    background: #1a1a1a;
+    padding: 4rem 2rem;
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* Service List */
+  .service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0; /* Eliminăm spațiul dintre elemente */
+  }
+  
+  .service-item {
+    background: #262626;
+    color: #cccccc;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.05); /* Zoom pe hover */
+    background: #333;
+  }
+  
+  .service-item h3 {
+    font-size: 1.6rem;
+    color: #e63946;
+    margin-bottom: 1rem;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .services-title {
+      font-size: 2rem;
+    }
+  
+    .service-item {
+      padding: 1.5rem;
+    }
+  }
+  /* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Pricing Section Styles */
+.pricing-section {
+    background-color: #201414;
+    padding: 4rem 0rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.pricing-header {
+    margin-bottom: 0;
+}
+
+.pricing-header h2 {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+}
+
+.pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    line-height: 1.8;
+    color: rgb(196, 196, 196);
+    font-size: 1.1rem;
+}
+
+.pricing-list li {
+    margin-bottom: 0.5rem;
+}
+
+.book-callout {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color: #0078D4;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.book-callout:hover {
+    background-color: #005bb5;
+}
+
+/* Linie șerpuită */
+.wave-divider {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: rgb(49, 41, 41);
+    margin-bottom: -100px; /* Ajustare pentru marginea dintre secțiuni */
+}
+
+/* Services Container */
+.services-container {
+    background-color: rgb(49, 41, 41);
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 0;
+    margin-bottom: -65px;
+    color: #fff;
+}
+
+.pricing-service {
+    background: rgba(237, 227, 227, 0.351);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-service .icon {
+    font-size: 3rem;
+    color: #0078D4;
+    margin-bottom: 1rem;
+}
+
+.pricing-service h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-service p {
+    font-size: 1rem;
+    color: rgb(162, 162, 162);
+    line-height: 1.6;
+}
+
+
+.oferte-section {
+    background-color: #333;;
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.oferte-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.oferte-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    list-style-type: none;
+    padding: 50px 100px;
+    margin: 0;
+}
+
+.oferte-list li {
+    font-size: 1rem;
+    color: rgb(183, 183, 183);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 20px;
+}
+
+.check-icon {
+    width: 16px;
+    height: 16px;
+    background-color: #28a745; /* Culoare verde pentru iconița bifată */
+    margin-right: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 3rem 1rem;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.contact-item {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    background-color: #333;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+}
+
+.contact-link {
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #e63946;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .testimonial-card,
+    .contact-item {
+        padding: 1.5rem;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+    }
+}
+
+/* Footer Section */
+.footer {
+    background-color: #110202;
+    color: #ccc;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.footer-link {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #e63946;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-link {
+    color: #ccc;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social-link:hover {
+    color: #ff0000;
+    transform: translateY(-5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-social-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* Add these styles to your existing styles.css */
+
+/* Service Areas Section */
+.service-areas {
+    background-color: #fff;
+    padding: 2rem 1rem;
+}
+
+.service-areas h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.area-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.area-item {
+    background-color: #f3f3f3;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.area-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Emergency Call Section */
+.emergency-call {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.emergency-call h2 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.emergency-call p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Contact Section Enhancements */
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-methods .btn-secondary {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-list,
+    .area-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+    }
+
+    .contact-methods .btn-secondary {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+.expertise {
+    background-color: #f4f4f4;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.expertise-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.expertise-item:hover {
+    transform: translateY(-10px);
+}
+
+.expertise-item h3 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Add any mobile-specific styling */
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
