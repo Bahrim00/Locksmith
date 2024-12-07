@@ -31,7 +31,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/slider1.png');
+    background-image: href('https://github.com/Bahrim00/Locksmith/blob/b6582eea39bd27acba768b7397ab045227ea5682/images/slider1.png');
     background-size: cover;
     background-position: center;
     z-index: -1; /* Asigură că imaginea rămâne în fundal */
