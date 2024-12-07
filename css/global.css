@@ -97,13 +97,13 @@ header .main-nav ul li a {
 header .main-nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.4);
-    color: #ffcc00; /* Evidențiere discretă */
+    color: #ff0000; /* Evidențiere discretă */
 }
 
 /* Buton activ */
 header .main-nav ul li a.active {
     background-color: rgba(255, 255, 255, 0.064);
-    color: #ffcc00;
+    color: #b10000;
     border-color: rgba(255, 255, 255, 0.17);
 }
 
@@ -188,7 +188,9 @@ header .contact-info {
         right: 0;
         width: 100%;
         padding: 1rem 0;
+        z-index: 999; /* Asigură-te că este deasupra */
     }
+    
 
     .main-nav.visible {
         display: flex;
