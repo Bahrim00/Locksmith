@@ -82,7 +82,6 @@ body {
     background-color: #e6b800;
 }
 
-
 /* Badges Section */
 .badges {
     padding: 20px;
@@ -108,40 +107,7 @@ body {
     max-width: calc(20% - 10px);
     text-align: center;
     transition: transform 0.3s ease;
-
-    /* Ascunde bara de scroll */
-    overflow: hidden; /* Ascunde scroll-ul complet */
-}
-
-/* Dacă vrei să păstrezi scroll-ul, dar bara să fie invizibilă */
-.badge {
-    overflow: auto; /* Permite scroll, dar bara va fi invizibilă */
-}
-
-.badge::-webkit-scrollbar {
-    display: none; /* Ascunde bara de scroll pentru Chrome, Safari, Edge */
-}
-
-.badge {
-    scrollbar-width: none; /* Ascunde bara de scroll pentru Firefox */
-    -ms-overflow-style: none; /* Ascunde bara de scroll pentru Internet Explorer */
-}
-
-
-.badge:hover {
-    transform: translateY(-5px);
-}
-
-.badge-icon {
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Ajustare dinamică a dimensiunii */
-    margin-right: 10px;
-    color: #ff9800;
-}
-
-.badge-text {
-    font-size: clamp(0.8rem, 2vw, 1rem); /* Ajustare dinamică a textului */
-    font-weight: 500;
-    color: #333;
+    box-sizing: border-box; /* Includează padding în lățimea elementului */
 }
 
 /* Media query pentru ajustare suplimentară */
@@ -162,14 +128,13 @@ body {
 
     .badge-text {
         font-size: clamp(0.8rem, 2vw, 1rem);
-        white-space: wrap;
-        overflow:auto;
+        white-space: normal; /* Permite textului să se împartă pe mai multe linii */
+        overflow: visible; /* Permite textului să depășească dacă este necesar */
         text-overflow: ellipsis;
         word-wrap: break-word;
         line-height: 1.2;
         text-align: center;
     }
-    
 }
 
 
@@ -217,7 +182,7 @@ body {
     display: flex; /* Activează Flexbox */
     justify-content: center; /* Centrează imaginea pe orizontală */
     align-items: center; /* Centrează imaginea pe verticală */
-    margin-top: 2rem;
+    margin-top: 10%;
 }
 
 .trust-icons img {
