@@ -86,7 +86,7 @@ body {
 /* Badges Section */
 .badges {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #c6c6c6;
 }
 
 .badge-container {
@@ -144,8 +144,8 @@ body {
 
     .badge-text {
         font-size: clamp(0.8rem, 2vw, 1rem);
-        white-space: nowrap;
-        overflow: hidden;
+        white-space: wrap;
+        overflow:auto;
         text-overflow: ellipsis;
         word-wrap: break-word;
         line-height: 1.2;
