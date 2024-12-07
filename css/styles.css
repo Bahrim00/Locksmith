@@ -108,7 +108,25 @@ body {
     max-width: calc(20% - 10px);
     text-align: center;
     transition: transform 0.3s ease;
+
+    /* Ascunde bara de scroll */
+    overflow: hidden; /* Ascunde scroll-ul complet */
 }
+
+/* Dacă vrei să păstrezi scroll-ul, dar bara să fie invizibilă */
+.badge {
+    overflow: auto; /* Permite scroll, dar bara va fi invizibilă */
+}
+
+.badge::-webkit-scrollbar {
+    display: none; /* Ascunde bara de scroll pentru Chrome, Safari, Edge */
+}
+
+.badge {
+    scrollbar-width: none; /* Ascunde bara de scroll pentru Firefox */
+    -ms-overflow-style: none; /* Ascunde bara de scroll pentru Internet Explorer */
+}
+
 
 .badge:hover {
     transform: translateY(-5px);
