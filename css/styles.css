@@ -109,8 +109,9 @@ body {
 
 /* Badges Section */
 .badges {
-    padding: 50px;
+    margin-bottom: -1rem;
     background-color: var(--black);
+    
 }
 
 .badge-container {
@@ -118,6 +119,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
+    padding: 2rem;
     background-color: var(--black);
 }
 
@@ -135,11 +137,14 @@ body {
     transition: transform 0.3s ease;
     flex-direction: column;
     box-sizing: border-box; /* Includează padding în lățimea elementului */
+    
 }
 
 .badge-icon {
     font-size: clamp(2rem, 4vw, 1.2rem);
 }
+
+
 
 /* Media query pentru ajustare suplimentară */
 @media (max-width: 768px) {
@@ -483,7 +488,7 @@ body {
     gap: 2rem;
     margin-top: 0;
 
-    color: #fff;
+    
 }
 
 .pricing-service {
@@ -513,7 +518,7 @@ body {
 
 .pricing-service p {
     font-size: 1rem;
-    color: rgb(162, 162, 162);
+    color: rgb(255, 255, 255);
     line-height: 1.6;
 }
 
