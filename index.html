@@ -67,6 +67,14 @@
 
 <!-- Badges section -->
 <section class="badges">
+    <div id="svg-container0"></div>
+<script>
+  fetch('images/wave.svg')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('svg-container0').innerHTML = data;
+    });
+</script>
     <div class="badge-container">
         <div class="badge">
             <div class="badge-icon"><span class="material-symbols-outlined">family_star</span></div>
@@ -97,6 +105,14 @@
             <div class="badge-text">No Call Out Fee</div>
         </div>
     </div>
+    <div id="svg-container1"></div>
+<script>
+  fetch('images/wave1.svg')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('svg-container1').innerHTML = data;
+    });
+</script>
 </section>
 
 
